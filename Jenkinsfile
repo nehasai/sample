@@ -1,3 +1,5 @@
+def artifactName
+def applicationName
 pipeline {
     agent any
     stages {
