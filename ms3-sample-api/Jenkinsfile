@@ -27,12 +27,5 @@ pipeline {
 }
          
 }
-   stage('Slack Notify') {
-            steps {
-               slackSend baseUrl: 'https://ms3inc.slack.com/services/hooks/jenkins-ci/', channel: '#iot-sandbox', color: '#439FE0", message : "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"', message: 'MS3-Sample-api executed successfully ', tokenCredentialId: 'Slack'
-
-            }
-
-}
-}
+  }
 }
