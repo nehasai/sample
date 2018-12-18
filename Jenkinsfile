@@ -2,13 +2,13 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            script {
+            steps {
                 sh 'mvn clean install package'
                 }
             }
 
         stage('test') {
-            script {
+            steps {
                 sh 'mvn clean test'
 
             }
@@ -20,10 +20,13 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', 
                 passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
                 {
+                steps {
                     sh 'export ANYPOINT_USERNAME="akw-contact"'
                     sh 'export ANYPOINT_PASSWORD="MS3Password"'
                     sh 'anypoint-cli'
                 }
+            }
+
             }         
         }
     }
