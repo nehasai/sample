@@ -1,5 +1,3 @@
-def artifactName
-def applicationName
 pipeline {
     agent any
     stages {
@@ -17,14 +15,12 @@ pipeline {
         }
         stage('deploy to  CloudHub') {
             steps {
-                applicationName = "$artifactName"+'-'+"dev"
-                echo "${applicationName}"
                 withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', 
                 passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
                 {
                 
-                    sh 'export ANYPOINT_USERNAME="akw-contact"'
-                    sh 'export ANYPOINT_PASSWORD="MS3Password"'
+                    sh 'export ANYPOINT_USERNAME="anypoint_usr"'
+                    sh 'export ANYPOINT_PASSWORD="anypoint_psw"'
                     sh 'anypoint-cli'
                 }
             }
