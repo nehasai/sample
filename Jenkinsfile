@@ -19,7 +19,7 @@ pipeline {
    {
 
        script {
-                sh 'mvn clean package deploy:deploy mule:deploy'              
+                sh 'mvn clean package deploy -X'              
                 }
              }
 }
