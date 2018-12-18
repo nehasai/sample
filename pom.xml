@@ -65,14 +65,7 @@
             <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
-	<distributionManagement>
-       <repository>
-         <id> </id>
-         <name> </name>
-         <url> </url>
-       </repository>
-   </distributionManagement>
-    
+	
     </repositories>
     <pluginRepositories>
         <pluginRepository>
