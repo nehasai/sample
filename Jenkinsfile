@@ -19,11 +19,7 @@ pipeline {
    {
 
        script {
-                sh 'anypoint-cli'
-                sh 'export ANYPOINT_USERNAME='+$"akw-contact"
-                echo "ANYPOINT_USERNAME"
-                sh 'export ANYPOINT_PASSWORD='+$"MS3Password"
-                echo "ANYPOINT_PASSWORD"
+                
                 sh 'mvn clean deploy'
                 
                 }
