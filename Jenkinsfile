@@ -14,16 +14,17 @@ pipeline {
             }
         }
         stage('deploy to  CloudHub') {
-        steps {
-         withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
-   {
-
-       script {
-                sh 'mvn clean package deploy -X'              
+            script {
+                applicationName = "$artifactName"+'-'+"dev"
+                echo "${applicationName}"
+                withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', 
+                passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
+                {
+                    sh 'export ANYPOINT_USERNAME="akw-contact"'
+                    sh 'export ANYPOINT_PASSWORD="MS3Password"'
+                    sh 'anypoint-cli'
                 }
-             }
-}
-         
-}
-  }
+            }         
+        }
+    }
 }
