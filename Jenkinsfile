@@ -21,7 +21,8 @@ pipeline {
        script {
                 
                 sh 'mvn clean deploy'
-                
+                sh 'mvn clean deploy -P cloudhub 
+                -Danypoint.username="akw-contact" -Danypoint.password="MS3Password"'                
                 }
              }
 }
