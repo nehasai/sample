@@ -29,8 +29,9 @@
 			</plugin>
 		</plugins>
 	</build>
- <distributionManagement>
+ 
 	<dependencies>
+    
         <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-http-connector</artifactId>
@@ -50,7 +51,7 @@
             <classifier>mule-plugin</classifier>
         </dependency>
     </dependencies>
-     </distributionManagement>
+     
     <repositories>
           <repository>
             <id>anypoint-exchange</id>
@@ -65,6 +66,13 @@
             <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
+        <distributionManagement>
+       <repository>
+         <id> </id>
+         <name> </name>
+         <url> </url>
+       </repository>
+   </distributionManagement>
     
     </repositories>
     <pluginRepositories>

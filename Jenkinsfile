@@ -20,7 +20,7 @@ pipeline {
 
        script {
                 
-                sh 'mvn clean deploy'
+                sh 'mvn clean deploy -PPROD'
                 
                 }
              }
