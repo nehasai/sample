@@ -19,7 +19,7 @@ pipeline {
    {
 
        script {
-                sh 'mvn clean deploy -P -Danypoint.username="akw-contact" -Danypoint.password="MS3Password"'                
+                sh 'mvn clean deploy -Danypoint.username="akw-contact" -Danypoint.password="MS3Password"'                
                 }
              }
 }
