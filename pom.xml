@@ -86,7 +86,7 @@
      	</repository>
      	 <snapshotRepository> 
      	<id>snapshots</id> 
-     	<url> </url>; 
+     	<url>http://our-nexus-repo-address:8091/nexus/content/repositories/snapshots</url>; 
      	</snapshotRepository> 
      </distributionManagement>
 
