@@ -79,5 +79,15 @@
             </snapshots>
             </pluginRepository>
     </pluginRepositories>
+    <distributionManagement> 
+     	<repository> 
+     	<id>${distribution.id}</id> 
+     	<url>${distribution.url}</url> 
+     	</repository>
+     	 <snapshotRepository> 
+     	<id>snapshots</id> 
+     	<url> </url>; 
+     	</snapshotRepository> 
+     </distributionManagement>
 
 </project>
