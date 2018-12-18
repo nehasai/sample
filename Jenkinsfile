@@ -14,20 +14,20 @@ pipeline {
             }
         }
         stage('deploy to  CloudHub') {
-            script {
+            steps {
                 applicationName = "$artifactName"+'-'+"dev"
                 echo "${applicationName}"
                 withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', 
                 passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
                 {
-                steps {
+                
                     sh 'export ANYPOINT_USERNAME="akw-contact"'
                     sh 'export ANYPOINT_PASSWORD="MS3Password"'
                     sh 'anypoint-cli'
                 }
             }
 
-            }         
+                     
         }
     }
 }
