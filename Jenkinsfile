@@ -18,10 +18,11 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', 
                 passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
                 {
-                
+                    sh 'anypoint-cli'
                     sh 'export ANYPOINT_USERNAME="anypoint_usr"'
                     sh 'export ANYPOINT_PASSWORD="anypoint_psw"'
                     sh 'anypoint-cli'
+                    sh 'anypoint-cli --username="anypoint_usr"'
                 }
             }
 
