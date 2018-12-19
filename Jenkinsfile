@@ -14,11 +14,10 @@ pipeline {
             }
         }
         stage('deploy to  CloudHub') {
-            environment{
+            script {
                 withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', 
                 passwordVariable: 'anypoint_psw', usernameVariable: 'anypoint_usr')])
-            }
-            steps {
+            {
                     sh 'anypoint-cli'
                     sh 'export ANYPOINT_USERNAME="anypoint_usr"'
                     sh 'export ANYPOINT_PASSWORD="anypoint_psw"'
@@ -33,3 +32,5 @@ pipeline {
         }
     }
 }
+}
+
