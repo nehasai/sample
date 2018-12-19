@@ -24,8 +24,8 @@ pipeline {
                     sh 'export ANYPOINT_PASSWORD="anypoint_psw"'
                     sh 'anypoint-cli'
                     sh 'anypoint-cli --username="anypoint_usr"'
-                    sh 'anypoint-cli --username=${anypoint_usr} --password=${anypoint_psw} --environment='+"$anypoint_environment"+' runtime-mgr 
-                    cloudhub-application modify --runtime '+"$muleversion"+' '+"$applicationName"+' '+"$artifactName"+'-'+"$version"+'.zip'
+                    sh 'anypoint-cli --username=${anypoint_usr} --password=${anypoint_psw} --environment='+"$anypoint_environment"+
+                    ' runtime-mgr cloudhub-application modify --runtime '+"$muleversion"+' '+"$applicationName"+' '+"$artifactName"+'-'+"$version"+'.zip'
                 } 
             }
 
