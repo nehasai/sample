@@ -24,8 +24,7 @@ pipeline {
                     sh 'export ANYPOINT_PASSWORD="anypoint_psw"'
                     sh 'anypoint-cli'
                     sh 'anypoint-cli --username="anypoint_usr"'
-                    sh 'mvn deploy -P cloudhub -Dmule.version=4.1.4
-                    -Danypoint.username=${anypoint_usr} -Danypoint.password=${anypoint_psw}' 
+                    sh 'mvn deploy -P -Danypoint.username=${anypoint_usr} -Danypoint.password=${anypoint_psw}' 
                 }
 
             
