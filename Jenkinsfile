@@ -1,6 +1,10 @@
+import groovy.json.JsonSlurperClassic
+
 node {
-def json = readFile(file:'https://github.com/nehasai/sample.git/sample.json')
-stages {
+    def json = readFile(file:'sample.json')
+    def data = new JsonSlurperClassic().parseText(json)
+
+        stages {
         stage('test') {
                steps {
                    script {
