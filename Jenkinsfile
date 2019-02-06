@@ -1,4 +1,4 @@
 import groovy.json.JsonSlurper
 node {
-       def config = readJSON(file:'dir/sample.json')
+       def json = readFile(file:'sample.json')
 }
