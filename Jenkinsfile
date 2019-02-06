@@ -1,5 +1,5 @@
 node {
-def json = readFile(file:'sample.json')
+def json = readFile(file:'https://github.com/nehasai/sample.git/sample.json')
 stages {
         stage('test') {
                steps {
