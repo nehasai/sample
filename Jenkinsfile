@@ -13,6 +13,7 @@ stages {
             steps {
                 sh 'mvn clean install package'
                 }
+          }
          stage('read json')
          {
         steps {
