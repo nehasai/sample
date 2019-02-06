@@ -1,7 +1,7 @@
 import groovy.json
 
 node {
-    def json = readFile(file:'https://github.com/nehasai/sample.git/sample.json')
+    def json = readFile "$sample.json"
 
         stages {
         stage('test') {
