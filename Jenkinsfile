@@ -1,7 +1,6 @@
 import groovy.json.JsonSlurper
+node {
 def json = readFile(file:'sample.json')
-pipeline {
-    agent any
 stages {
         stage('test') {
                steps {
@@ -15,5 +14,4 @@ stages {
                 sh 'mvn clean install package'
                 }
           }
-}
 }
