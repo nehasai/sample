@@ -1,0 +1,39 @@
+{
+ "coverage" : 75.0,
+ "requiredApplicationCoverage" : 40.0,
+ "requiredResourceCoverage" : 30.0,
+ "requiredFlowCoverage" : 25.0,
+ "flowCount" : 3, 
+ "processorCount" : 4,
+ "coveredProcessorCount": 4 
+ "files" : [ {
+   "name": "sample.xml",
+   "flowCount" : 1, 
+   "coverage" : 100.0,
+   "processorCount" : 2,
+   "weight" : 100.0, 
+   "flows" : [ {
+     "name" : "file1Flow1" 
+     "type" : "FLOW", 
+     "coverage" : 100.0, 
+     "processorCount" : 2, 
+     "coveredProcessorCount" : 2
+
+   } ],
+   "name" : "file1.xml" 
+ }, {
+   "coverage" : 50.0,
+   "flowCount" : 2,
+   "messageProcessorCount" : 2,
+   "flows" : [ {
+     "coverage" : 0.0,
+     "messageProcessorCount" : 1,
+     "name" : "file2Flow1"
+   }, {
+     "coverage" : 100.0,
+     "messageProcessorCount" : 1,
+     "name" : "file2Flow2"
+   } ],
+   "name" : "file2.xml"
+ } ]
+
