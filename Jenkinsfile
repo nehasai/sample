@@ -1,21 +1,13 @@
-import groovy.json.JsonSlurperClassic
-
-node {
-    def json = readFile(file:'sample.json')
-    def data = new JsonSlurperClassic().parseText(json)
-
-        stages {
-        stage('test') {
-               steps {
-                   script {
-                       sh 'mvn clean test'
-                    }                
-                } 
-            }
-        stage('build') {
+pipeline {
+    agent any
+    tools {
+        maven 'maven3'
+    }
+    stages {
+        stage('Install') {
             steps {
-                sh 'mvn clean install package'
-                }
-          }
-}
+                sh "mvn clean test"
+            }
+        }
+    }
 }
